@@ -22,7 +22,7 @@ class KonversiSuhu{
             convertAndPrint("kelvin", (nilaiSuhu - 32.0) * 4.0/9.0 + 273);
         } else if (jenisSuhu.equals("kelvin")) {
             convertAndPrint("celcius", (nilaiSuhu - 32.0) * 4.0/5.0);
-            convertAndPrint("celcius", (nilaiSuhu - 273) * 4.0/5.0);
+            convertAndPrint("reamur", (nilaiSuhu - 273) * 4.0/5.0);
             convertAndPrint("fahrenheit", (nilaiSuhu + 32.0) * 9.0/4.0);
         }
     }
