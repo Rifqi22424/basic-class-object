@@ -78,7 +78,7 @@ public class App {
 
     public static void main(String[] args) {
         System.out.println("\t");
-        KonversiSuhu konversiSuhu = new KonversiSuhu("kelvin", 12);
+        KonversiSuhu konversiSuhu = new KonversiSuhu("celcius", 12);
         konversiSuhu.getNilaiSuhuTo();
         System.out.println("\t");
 
