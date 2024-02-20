@@ -10,22 +10,22 @@ class KonversiSuhu{
     public void getNilaiSuhuTo() {
         if (jenisSuhu.equals("reamur")) {
             convertAndPrint("celcius", nilaiSuhu * 5.0/4.0);
-            convertAndPrint("fahrenheit", nilaiSuhu * 9.0/4.0 + 32.0);
-            convertAndPrint("kelvin", nilaiSuhu * 5.0/4.0 + 273);
+            convertAndPrint("fahrenheit", (nilaiSuhu * 5.0/4.0) + 32.0);
+            convertAndPrint("kelvin", (nilaiSuhu * 5.0/4.0) + 273);
         } else if (jenisSuhu.equals("celcius")) {
             convertAndPrint("reamur", nilaiSuhu * 4.0/5.0);
-            convertAndPrint("fahrenheit", nilaiSuhu * 9.0/4.0 + 32.0);
-            convertAndPrint("kelvin", nilaiSuhu * 5.0/4.0 + 273);
+            convertAndPrint("fahrenheit", (nilaiSuhu * 9.0/5.0) + 32.0);
+            convertAndPrint("kelvin", nilaiSuhu + 273);
         } else if (jenisSuhu.equals("fahrenheit")) {
-            convertAndPrint("celcius", (nilaiSuhu - 32.0) * 4.0/9.0);
+            convertAndPrint("celcius", (nilaiSuhu - 32.0) * 5.0/9.0);
             convertAndPrint("reamur", (nilaiSuhu - 32.0) * 4.0/9.0);
-            convertAndPrint("kelvin", (nilaiSuhu - 32.0) * 4.0/9.0 + 273);
+            convertAndPrint("kelvin", (nilaiSuhu - 32.0) * 5.0/9.0 + 273);
         } else if (jenisSuhu.equals("kelvin")) {
-            convertAndPrint("celcius", (nilaiSuhu - 32.0) * 4.0/5.0);
+            convertAndPrint("celcius", nilaiSuhu - 273);
             convertAndPrint("reamur", (nilaiSuhu - 273) * 4.0/5.0);
-            convertAndPrint("fahrenheit", (nilaiSuhu + 32.0) * 9.0/4.0);
+            convertAndPrint("fahrenheit", (nilaiSuhu - 273) * 9.0/5.0 + 32.0);
         }
-    }
+    }    
 
     private void convertAndPrint(String targetSuhu, double nilaiSuhu) {
         System.out.println(targetSuhu + ": " + nilaiSuhu);
